@@ -1,0 +1,25 @@
+Il faut creer une base de donne ecole avec les tables departement , filliere et etudiant
+------------------------------------------
+requetes pour cree les tables : 
+1- departement
+crate table `departement` (codedepart varchar(10) not null primary key,nomdepart varchar(100));
+2- filliere
+create table `filliere` (codefill varchar(10) not null primary key,codedepart varchar(10)  REFERENCES departement(codedepart), nomfill varchar(100));
+3- etudiant
+CREATE TABLE `departement` (
+  ide INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nom varchar(30),
+  prenom varchar(30),
+  codedepart varchar(10)  REFERENCES departement(codedepart),
+  codefill varchar(10)  REFERENCES filliere(codefill)
+);
+4-user
+crate table `user`(
+   idu INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   username varchar(30),
+   password varchar(30),
+   mode_d_acces varchar(6)
+);
+--------------------------------------------------------------------
+il faut ajouter l utilisateur admin :
+insert into user VALUES (1,'admin','admin','ROOT');
