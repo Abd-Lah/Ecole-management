@@ -1,4 +1,4 @@
-Il faut creer une base de donne ecole avec les tables departement , filliere et etudiant
+Il faut creer une base de donne Mysql ecole avec les tables departement , filliere et etudiant
 ------------------------------------------
 requetes pour cree les tables : 
 1- departement
